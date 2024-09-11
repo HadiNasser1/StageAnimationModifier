@@ -100,6 +100,6 @@ def read_and_process_yml(input_file_path, output_file_path):
             file.write(f"      W: {entry['data']['W']}\n")
 
 if __name__ == "__main__":
-    input_file_path = "C:\\Users\\hadif\\Desktop\\Spencer Anims\\Spencer_l0\\1.yml"    # Path to the original YAML file
-    output_file_path = "C:\\Users\\hadif\\Desktop\\Spencer Anims\\Spencer_l0\\1suck.yml" # Path to save the new YAML file
+    input_file_path = "FILE PATH HERE"    # Path to the original YAML file
+    output_file_path = "FILE PATH HERE" # Path to save the new YAML file
     read_and_process_yml(input_file_path, output_file_path)
