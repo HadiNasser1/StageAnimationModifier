@@ -1,5 +1,6 @@
 import yaml
 import os
+import sys
 
 # Boilerplate is so annoying to write :3
 
@@ -100,6 +101,12 @@ def read_and_process_yml(input_file_path, output_file_path):
             file.write(f"      W: {entry['data']['W']}\n")
 
 if __name__ == "__main__":
-    input_file_path = "FILE PATH HERE"    # Path to the original YAML file
-    output_file_path = "FILE PATH HERE" # Path to save the new YAML file
+    if len(sys.argv) < 3:
+        print("Usage: StageModifyIn.py <input_file> <output_file>")
+        sys.exit(1)
+
+    input_file_path = sys.argv[1]  # Get input file from command-line argument
+    output_file_path = sys.argv[2]  # Get output file from command-line argument
+
     read_and_process_yml(input_file_path, output_file_path)
+    print(f"Processing complete. Output saved to: {output_file_path}")
