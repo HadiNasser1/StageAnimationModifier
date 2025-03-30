@@ -73,6 +73,8 @@ def process_data(data):
 
 def read_and_process_yml(input_file_path, output_file_path):
     base_name = os.path.splitext(os.path.basename(input_file_path))[0]
+    print(f"Processing: {input_file_path}")
+    print(f"Saving output to: {output_file_path}")
 
     # Some preamble to skip the first 6 lines so python doesnt scream at me :VVVVV
     with open(input_file_path, 'r') as file:
