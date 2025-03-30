@@ -9,7 +9,7 @@ def process_data(data):
     modified_data = []
     for entry in data:
         # Ignore entries with BoneID 255, 1, 2, 3
-        if entry['BoneID'] in [255, 1, 2, 3]:
+        if entry['BoneID'] in [255]:
             continue
         # Skip localscale
         if entry['TrackType'] == 'localscale':
